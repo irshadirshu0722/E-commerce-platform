@@ -1,4 +1,4 @@
-backend/db
+db
 env
-backend/env-activate.Readme
-backend/db.sqlite3
+env-activate.Readme
+db.sqlite3
