@@ -1,0 +1,61 @@
+.custom-filter-container .filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: var(--primary-700);
+  padding: 1rem 0;
+}
+.custom-filter-container .filter-toggle-group {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.custom-filter-container .filter-toggle .icon {
+  font-size: 1.5rem;
+}
+.custom-filter-container .filter-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+.custom-filter-container .filter-container > div {
+  margin-bottom: 2rem;
+}
+.custom-filter-container .filter-container.show-filter-container {
+  max-height: 500px;
+}
+.custom-filter-container .filter-container .filter-heading {
+  font-weight: 900;
+  padding: 1rem 0;
+  /* margin-top: 2rem; */
+  margin-left: 0;
+}
+.custom-filter-container .filter-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.custom-filter-container .filter-container ul li {
+  background-color: var(--grey-200);
+  border-radius: var(--borderRadiusLarge);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.custom-filter-container .filter-container ul li[data-selected="true"] {
+  background-color: var(--primary-500);
+  color: var(--white);
+}
+.custom-filter-container .filter-apply-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+.custom-filter-container .filter-apply-btn .reset-btn {
+  background-color: var(--primary-900);
+}

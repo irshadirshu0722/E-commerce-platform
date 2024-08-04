@@ -1,0 +1,77 @@
+/* ========
+signup
+===========
+*/
+.signup {
+  margin-top: 4rem;
+  min-height: calc(100vh - 65px);
+}
+.signup-center {
+  width: 100%;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 700px) {
+  .signup-center {
+    max-width: 95%;
+  }
+}
+.signup-heading h1 {
+  text-align: center;
+  font-weight: 900;
+}
+.signup-heading {
+  margin-bottom: 2rem;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+.signup-form .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.signup-form .form-group label {
+  text-transform: capitalize;
+}
+.signup-form .form-group input {
+  width: 100%;
+  padding: 1rem 0.9rem;
+  border-radius: var(--borderRadiusMedium);
+  border: 1px solid var(--grey-300);
+  background-color: var(--backgroundColor);
+  outline: none;
+}
+.signup-form .form-group input::placeholder {
+  color: var(--grey-1000);
+}
+.signup-form .form-btn button {
+  width: 100%;
+  margin-top: 1rem;
+}
+.signup-form .already-have-account {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+  color: var(--primary-700);
+  text-transform: none;
+}
+.signup-form .form-checkbox input {
+  width: 1.2rem; /* Adjust width as needed */
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
+.signup-form .form-checkbox label {
+  font-size: 1.2rem;
+}
+.signup-form .form-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

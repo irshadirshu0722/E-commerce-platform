@@ -1,0 +1,61 @@
+.account-center {
+  min-height: calc(100vh - 100px);
+  padding-top: 3rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.account-center .account-navigation-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.account-center .account-navigation-bar .account-navigation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--borderRadiusSmall);
+  cursor: pointer;
+  padding: 2rem;
+  transition: var(--transition);
+  color: var(--black);
+}
+.account-center .account-navigation-bar .account-navigation-item .group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.account-center .account-navigation-bar .account-navigation-item:hover .group {
+  transform: translateX(20px);
+}
+.account-center .account-navigation-bar .account-navigation-item:hover {
+  background-color: var(--grey-250);
+}
+.account-center .account-navigation-bar .account-navigation-item .group span {
+  font-size: 2rem;
+}
+@media (max-width: 786px) {
+  .account-center .account-navigation-bar {
+    padding: 2rem 0rem;
+  }
+  .account-center .account-navigation-bar li {
+    padding: 2rem 1rem;
+  }
+}
+
+/* .account-center  .back-navigation {
+  display: flex;
+  align-items: center;
+}
+.account-center .account-pages .back-navigation span {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.account-center .account-pages .back-navigation h1 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+} */

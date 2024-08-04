@@ -1,0 +1,39 @@
+.chatbot-navigator-container {
+  position: fixed;
+  z-index: 100;
+  bottom: 7.5%;
+  right: 2%;
+}
+.chatbot-navigator-container .close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  color: var(--black);
+  font-size: 0.2rem;
+
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+}
+.chatbot-navigator-container .navigating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-3);
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--borderRadiusSmall);
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+.chatbot-navigator-container .navigating-container span {
+  font-weight: bold;
+  font-size: 1.8em;
+
+  /* color: var(--primary-blue); */
+}
+.chatbot-navigator-container .navigating-container:hover {
+  background-color: var(--primary-500);
+}

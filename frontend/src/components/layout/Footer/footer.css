@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+
+.footer {
+  width: 100%;
+  height: 100%;
+  height: auto;
+}
+
+/* Taller footer on small screens */
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+.footer {
+  padding-top: 40px;
+  background-color: var(--grey-200);
+  color: var(--black);
+  width: 100%;
+  min-height: 400px;
+  padding-bottom: 30px;
+}
+ul {
+  list-style: none;
+}
+.footer a {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer a:hover,
+footer a:focus {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--black);
+}
+.footer .row {
+  display: flex;
+  flex-direction: column;
+}
+.footer .usefull-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--black);
+}
+.footer .usefull-links .footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer .usefull-links .footer-logo img {
+  width: 300px;
+  border: none;
+  padding-left: 2rem;
+}
+.footer .usefull-links .store-details ul,
+.footer .usefull-links .policy-details ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .usefull-links .store-details ul li,
+.footer .usefull-links .policy-details ul li {
+  color: var(--black);
+  cursor: pointer;
+}
+.footer .usefull-links .store-details ul li:first-child,
+.footer .usefull-links .policy-details ul li:first-child {
+  font-size: 24px;
+}
+
+.footer .payment-community {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: fahkwang, sans-serif;
+  padding: 0 1rem;
+}
+
+.footer .payment-community .payment-methods h5,
+.footer .payment-community .community h5 {
+  font-family: fahkwang, sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variation-settings: normal;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.footer .payment-community .payment-methods .methods {
+  display: flex;
+  gap: 20px;
+}
+.footer .payment-community .payment-methods img {
+  width: 44px;
+  height: 22px;
+}
+.footer .payment-community .community {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.footer .payment-community .community div {
+  display: flex;
+  flex-direction: column;
+}
+.footer .payment-community .community .social-media-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 770px) {
+  .footer .usefull-links {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding-left: 20px;
+  }
+  .footer .usefull-links .footer-logo {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.footer .service_highlight {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.footer .service_highlight > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  /* padding: 1rem; */
+}
+.footer .service_highlight .logo svg {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+}
+.footer .service_highlight .logo-info {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 770px) {
+  .footer .service_highlight .logo svg {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .footer .service_highlight .logo-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .footer .service_highlight .logo svg {
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+  }
+  .footer .service_highlight .logo-info {
+    margin-top: 0.7rem;
+    font-size: 0.7rem;
+  }
+}
