@@ -1,0 +1,10 @@
+@media (max-width: 786px) {
+  .account-back-pagination h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .account-back-pagination h1 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,23 @@
+{% extends 'mail_senter/order_base.html' %} {% block heading %}
+
+<h1>Your Return Request Has Been Confirmed</h1>
+
+{% endblock %} {% block description %}
+
+<p>Dear Customer,</p>
+
+<p>
+  We're delighted to inform you that your return request has been confirmed. Our
+  team is currently processing your request and will provide updates shortly.
+  Kindly send the product along with any relevant details regarding the issue,
+  supported by photos or videos, to the WhatsApp number or email address
+  provided below.
+</p>
+<br />
+<h3>Conact details</h3>
+
+<p>Email Address : {{admin_contact_details.email}}</p>
+<p>WhatsApp Number : {{admin_contact_details.whatsapp_number}}</p>
+<br />
+<hr />
+{% endblock %}

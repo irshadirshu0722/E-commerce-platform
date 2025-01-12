@@ -1,0 +1,218 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        img {
+            max-width: 100px; /* Adjust the logo size as needed */
+            display: block;
+            margin: 0 auto;
+        }
+        p {
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .company-logo{
+          width: 1257px;
+          width: 217px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img class="company-logo" src='{{site_logo_with_name}}' alt="Company Logo">
+    {% block heading %}
+    {% endblock %}
+    <hr>
+    {% block description %}
+    {% endblock %}
+
+    <p><strong>Order ID:</strong> #{{ order_data.order_id }}</p>
+<p><strong>Order Date:</strong> {{ order_data.order_at }}</p>
+    <h2>Items:</h2>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        {% for item in order_data.order_items %}
+            <tr>
+                <td>{{ item.product_name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Order Summary</h2>
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>&#8377;{{ order_data.subtotal }}</td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td>&#8377;{{ order_data.discount }}</td>
+        </tr>
+        <tr>
+            <td>Delivery Charge</td>
+            <td>&#8377;{{ order_data.delivery_details.delivery_charge }}</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>&#8377;{{ order_data.total }}</td>
+        </tr>
+    </table>
+    </table>
+  {% if order_data.billing_address %}
+      <div class="address-box">
+        <table>
+          <thead>
+            <tr>
+              <td colspan="2"><h2>Billing Address</h2></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{ order_data.billing_address.address.firstName }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.lastName }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.address }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.landmark }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.city }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.pincode }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.district }}</td>
+          </tr>
+            <tr>
+          
+            <td>{{ order_data.billing_address.address.state }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.phoneNumber }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.billing_address.address.email }}</td>
+          </tr>
+        
+        </table>
+      </div>
+      {% endif %}
+      <br />
+      <br />
+      {% if order_data.shipping_address %}
+      <div class="address-box">
+        <table>
+          <thead>
+            <tr>
+              <td colspan="2"><h2>Shipping Address</h2></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{ order_data.shipping_address.address.firstName }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.lastName }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.address }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.landmark }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.city }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.pincode }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.district }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.state }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.phoneNumber }}</td>
+          </tr>
+          <tr>
+            <td>{{ order_data.shipping_address.address.email }}</td>
+          </tr>
+
+        </table>
+      </div>
+      {% endif %}
+
+
+
+
+      <p>
+        If you have any inquiries or need further assistance regarding your
+        cancelled order, our dedicated customer support team is ready to provide
+        the necessary support.
+      </p>
+
+      <p>
+        We understand that circumstances may change, and we appreciate your
+        business. Please feel free to reach out if you have any questions or if
+        you'd like to place a new order with us in the future.
+      </p>
+
+      <p>Sincerely,<br />KL Electronics</p>
+  
+  <a href={{shop_url}} class="button">Visit Our Shop</a>
+</div>
+
+
+</body>
+</html>

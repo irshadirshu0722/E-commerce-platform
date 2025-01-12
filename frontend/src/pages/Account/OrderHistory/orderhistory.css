@@ -1,0 +1,145 @@
+.account-orders-center .account-orders-items {
+  display: flex;
+  flex-direction: column;
+}
+.account-orders-center .account-orders-items .account-orders-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: var(--borderRadiusMedium);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.account-orders-center .account-orders-items .account-orders-item:hover {
+  background-color: var(--grey-200);
+}
+.account-orders-center .account-orders-items .account-orders-item .order-info {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem 1rem;
+  align-items: center;
+}
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-details
+  p {
+  letter-spacing: 1px;
+  color: var(--grey-900);
+}
+
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-logo
+  img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+}
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: end;
+}
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-status
+  .status {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.account-orders-center
+  .account-orders-items
+  .account-orders-item
+  .order-status
+  img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  object-position: center;
+}
+.account-orders-center .MuiPagination-root {
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+@media (max-width: 786px) {
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-status
+    img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-logo
+    img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .account-orders-center .account-orders-items {
+    padding: 0rem 0rem;
+  }
+}
+@media (max-width: 500px) {
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-status
+    img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-status
+    p {
+    font-size: 0.8rem;
+  }
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-logo
+    img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .account-orders-center
+    .account-orders-items
+    .account-orders-item
+    .order-details
+    p {
+    font-size: 0.8rem;
+  }
+  .account-orders-center .account-orders-items {
+    padding: 0rem 0rem;
+  }
+}

@@ -1,0 +1,57 @@
+.placeorder-center .placeorder-step1-shipping-address {
+  margin-bottom: 3rem;
+}
+
+.placeorder-center .placeorder-step1-shipping-address .section-sub-heading h3,
+.placeorder-center .placeorder-step1-shipping-address .section-sub-heading {
+  margin-bottom: 1rem;
+}
+
+.placeorder-center .placeorder-shipping-address-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.placeorder-center .placeorder-shipping-address-toggle h5 {
+  color: var(--grey-700);
+}
+/* toggle */
+.placeorder-center .shipping-address-form {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.placeorder-center .show-shipping-address-form {
+  max-height: 2000px;
+}
+.placeorder-center .shipping-address-form input,
+.placeorder-center .billing-address-form input {
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  border: 1px solid var(--grey-500);
+  background-color: var(--backgroundColor);
+  border-radius: var(--borderRadiusSmall);
+}
+.placeorder-center .shipping-address-form .form-group,
+.placeorder-center .billing-address-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 350px;
+  margin-top: 2rem;
+}
+.placeorder-center .placeorder-step1-proceed-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.placeorder-center .placeorder-step1-proceed-btn a {
+  border-radius: var(--borderRadiusSmall);
+}
+.placeorder-center .placeorder-step1-proceed-btn .placeorder-cancel-btn {
+  background-color: var(--grey-200);
+  color: var(--grey-700);
+}

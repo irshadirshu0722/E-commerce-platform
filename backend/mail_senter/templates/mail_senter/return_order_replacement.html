@@ -1,0 +1,56 @@
+{% extends 'mail_senter/order_base.html' %}
+
+{% block heading %}
+
+<h1>Your Return Order Has Been Confirmed: Replacement</h1>
+{% endblock %}
+{% block description %}
+
+<p>Dear Customer,</p>
+<p>
+  We're pleased to inform you that your replacement order has been confirmed. Please ensure that your product is securely packaged before sending it to the address provided below. Kindly note that if the product is damaged due to insufficient packaging, we cannot accept responsibility.
+</p>
+
+<div class="address-box">
+        <table>
+          <thead>
+            <tr>
+              <td colspan="2"><h2>Sent to this address</h2></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{ admin_contact_details.address.firstName }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.lastName }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.address }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.landmark }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.city }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.pincode }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.district }}</td>
+          </tr>
+            <tr>
+          
+            <td>{{ admin_contact_details.address.state }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.phoneNumber }}</td>
+          </tr>
+          <tr>
+            <td>{{ admin_contact_details.address.email }}</td>
+          </tr>
+        
+        </table>
+      </div>
+      <br>
+{% endblock %}

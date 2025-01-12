@@ -1,0 +1,12 @@
+{% extends 'mail_senter/order_base.html' %} {% block heading %}
+
+<h1>Your Order Has Been Completed</h1>
+
+{% endblock %} {% block description %}
+
+<p>Dear Customer,</p>
+<p>We are delighted to inform you that your order has been successfully completed. Your items have been carefully processed and are on their way to you.</p>
+<p>If you encounter any issues with the products received, don't hesitate to reach out to our customer support team. We're here to assist you with any concerns or queries you may have.</p>
+<p>Congratulations on your purchase, and thank you for choosing [Your Shop Name]! We truly appreciate your business and hope you enjoy using our products.</p>
+<a href={{shop_url}} class="button">Visit Our Shop</a>
+{% endblock %}

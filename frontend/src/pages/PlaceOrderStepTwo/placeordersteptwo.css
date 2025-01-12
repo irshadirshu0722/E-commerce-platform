@@ -1,0 +1,62 @@
+.placeorder-center .placeorder-step2-payment-methods-form form {
+  display: flex;
+  flex-direction: column;
+}
+.placeorder-center .placeorder-step2-payment-methods-form .form-sub-group {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 1rem;
+
+  cursor: pointer;
+}
+.placeorder-center .placeorder-step2-payment-methods-form .form-group {
+  border: 1px solid var(--grey-600);
+  border-radius: var(--borderRadiusSmall);
+  transition: var(--transition);
+  padding: 0 0 1rem 0;
+  padding: 1.2rem 2rem;
+}
+.placeorder-center
+  .placeorder-step2-payment-methods-form
+  .form-group
+  .description {
+  transition: var(--transition);
+  max-height: 0px;
+  overflow: hidden;
+}
+.placeorder-center
+  .placeorder-step2-payment-methods-form
+  .form-group
+  .description.open {
+  max-height: 500px;
+  margin-top: 1rem;
+}
+.placeorder-center
+  .placeorder-step2-payment-methods-form
+  .input-box-error-message {
+  margin: 0.5rem 0;
+}
+.placeorder-center .placeorder-step2-payment-methods-form .form-group:hover {
+  transform: scale(1.02);
+}
+.placeorder-center .placeorder-step2-payment-methods-form .form-group input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.placeorder-center .placeorder-step2-proceed-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.placeorder-center .placeorder-step2-proceed-btn a {
+  border-radius: var(--borderRadiusSmall);
+}
+.placeorder-center .placeorder-step2-proceed-btn .placeorder-cancel-btn {
+  background-color: var(--grey-200);
+  color: var(--grey-700);
+}

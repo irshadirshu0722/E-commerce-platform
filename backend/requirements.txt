@@ -1,0 +1,10 @@
+django
+gevent
+mailjet_rest
+django_celery_beat
+django_celery_results
+djangorestframework
+django-cors-headers
+drf-yasg
+jinja2
+redis

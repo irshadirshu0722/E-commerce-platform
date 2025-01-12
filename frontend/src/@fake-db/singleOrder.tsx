@@ -1,0 +1,88 @@
+export const fake_order_items = [
+  {
+    id: 1,
+    product_name: "Product A",
+    product_price: 10.99,
+    quantity: 2,
+    total: 21.98,
+    product_id: 1,
+    has_feedback: true,
+    feedback: {
+      id: 1,
+      user_id: 1,
+      order_item_id: 1,
+      product_id: 1,
+      star_rating: 4,
+    },
+  },
+  {
+    id: 2,
+    product_name: "Product B",
+    product_price: 15.99,
+    quantity: 1,
+    total: 15.99,
+    product_id: 2,
+    has_feedback: false,
+
+    feedback: {
+      id: 2,
+      user_id: 2,
+      order_item_id: 2,
+      product_id: 2,
+      star_rating: 0,
+    },
+  },
+  {
+    id: 3,
+    product_name: "Product C",
+    product_price: 8.49,
+    quantity: 20,
+    total: 25.47,
+    product_id: 3,
+    has_feedback: true,
+    feedback: {
+      id: 3,
+      user_id: 3,
+      order_item_id: 3,
+      product_id: 3,
+      star_rating: 1,
+    },
+  },
+  {
+    id: 4,
+    product_name: "Product D",
+    product_price: 12.75,
+    quantity: 2,
+    total: 25.5,
+    product_id: 4,
+    has_feedback: false,
+    feedback: {
+      id: 4,
+      user_id: 4,
+      order_item_id: 4,
+      product_id: 4,
+      star_rating: 0,
+    },
+  },
+  {
+    id: 5,
+    product_name: "Product E",
+    product_price: 9.99,
+    quantity: 1,
+    total: 9.99,
+    product_id: 5,
+    has_feedback: false,
+    feedback: {
+      id: 5,
+      user_id: 5,
+      order_item_id: 5,
+      product_id: 5,
+      star_rating: 0,
+    },
+  },
+];
+
+export const fake_return_product = {
+  order_id: 2,
+  return_products: [],
+};

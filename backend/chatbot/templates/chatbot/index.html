@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .chat-rooms-section {
+        padding: 2rem 0;
+      }
+      .section-center {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 95vw;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 20px;
+        max-height: 93vh;
+        min-height: 93vh;
+        overflow-y: scroll;
+        scrollbar-width: thin; /* or auto */
+        scrollbar-color: #555 #f5f5f5; /* thumb and track colors */
+        scrollbar-width: 12px;
+      }
+      .section-center::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+      }
+
+      .section-center::-webkit-scrollbar {
+        width: 12px;
+        background-color: #f5f5f5;
+      }
+
+      .section-center::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #555;
+      }
+      /* This will work in Firefox */
+
+      .section-heading {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      .section-heading h1 {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        background-color: rgb(239, 234, 234);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .chat-rooms li .chat-room-image-info {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .chat-rooms li {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-top: 2px solid black;
+        cursor: pointer;
+        user-select: none;
+      }
+      .chat-rooms li .chat-room-image-info .chat-room-image {
+        width: 50px;
+        height: 50px;
+      }
+      .chat-rooms li .chat-room-image-info .chat-room-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+      }
+      .chat-rooms .last-message {
+        height: 30px;
+        overflow: hidden;
+        font-size: 0.7rem;
+        max-width: 300px;
+        text-wrap: wrap;
+      }
+      .chat-rooms .last-message-date {
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+      }
+      .chat-room-more-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+      .chat-rooms .unseen-message-count {
+        background-color: #068836;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 50%;
+        display: inline-block;
+        align-self: flex-end;
+        height: fit-content;
+        font-size: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="chat-rooms-section">
+      <div class="section-center">
+        <div class="section-heading">
+          <h1>chat</h1>
+        </div>
+        <ul class="chat-rooms">
+          {% for room in rooms %}
+          <li data-room_name="{{room.name}}">
+            <div class="chat-room-image-info">
+              <div class="chat-room-image">
+                <img
+                  src="https://i.pinimg.com/736x/26/61/9c/26619c16b5451afaa95956dff93ae3e5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="chat-room-info">
+                <h4 class="user-name">{{room.user.username}}</h4>
+                <p class="last-message">{{room.last_message}}</p>
+              </div>
+            </div>
+            <div class="chat-room-more-details">
+              <p class="last-message-date">{{room.last_message_date}}</p>
+              {% if room.total_unseen_messages == '0' %}
+
+              <p class="unseen-message-count">{{room.total_unseen_messages}}</p>
+
+              {% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    <script>
+      const rooms = document.querySelectorAll(".chat-rooms li");
+      rooms.forEach((item) => {
+        const room_name = item.getAttribute("data-room_name");
+        item.addEventListener("click", () => {
+          window.location = `/chat/reply/${room_name}`;
+        });
+      });
+    </script>
+  </body>
+</html>

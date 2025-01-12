@@ -1,0 +1,39 @@
+.arrow-toggle-container-main {
+  margin-bottom: 2rem;
+  background: var(--grey-200);
+  border-radius: 30px;
+}
+.arrow-toggle-container-toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+.arrow-toggle-container-toggler-heading {
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.arrow-toggle-container-toggler-btn {
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+  padding: 0.2rem;
+  color: var(--primary-blue);
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: var(--transition);
+}
+.arrow-toggle-container-main
+  .arrow-toggle-container-toggler.open
+  .arrow-toggle-container-toggler-btn {
+  transform: rotate(0deg);
+}
+
+.arrow-toggle-container-main .arrow-open-container {
+  max-height: 0;
+  transition: var(--transition);
+  overflow: hidden;
+}
+.arrow-toggle-container-main .arrow-open-container.open {
+  max-height: 2000px;
+}

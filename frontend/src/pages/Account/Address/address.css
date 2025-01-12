@@ -1,0 +1,55 @@
+.account-address-center .account-address-shipping,
+.account-address-center .account-address-billing {
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.account-address-center .account-address-shipping .section-sub-heading h3,
+.account-address-center .account-address-shipping .section-sub-heading {
+  margin-bottom: 1rem;
+}
+.account-address-center .account-billing-address-toggle,
+.account-address-center .account-shipping-address-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-address-center .account-billing-address-toggle h5,
+.account-address-center .account-shipping-address-toggle h5 {
+  color: var(--grey-700);
+}
+/* toggle */
+.account-address-center .billing-address-form,
+.account-address-center .shipping-address-form {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.account-address-center .show-billing-address-form,
+.account-address-center .show-shipping-address-form {
+  max-height: 2000px;
+  padding-top: 2rem;
+}
+.account-address-center .shipping-address-form form input,
+.account-address-center .billing-address-form form input {
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  border: 1px solid var(--grey-500);
+  background-color: var(--backgroundColor);
+  border-radius: var(--borderRadiusSmall);
+}
+.account-address-center .shipping-address-form form .form-group,
+.account-address-center .billing-address-form form .form-group {
+  max-width: 350px;
+}
+.account-address-center .account-address-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.account-address-center .account-address-save-btn a {
+  border-radius: var(--borderRadiusSmall);
+}

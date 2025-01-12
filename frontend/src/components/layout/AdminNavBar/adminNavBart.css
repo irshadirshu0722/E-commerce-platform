@@ -1,0 +1,50 @@
+/* =========
+NavBar
+=========
+*/
+.admin-nav-bar {
+  box-shadow: var(--shadow-2);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark-theme);
+  color: var(--white);
+}
+.admin-nav-bar .nav-center {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+}
+ .admin-nav-bar .nav-toggle {
+  display: none;
+}
+ .admin-nav-bar .nav-center .links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+ .admin-nav-bar .nav-center .links li {
+  text-transform: capitalize;
+}
+ .admin-nav-bar .nav-center .links li a {
+  color: var(--white);
+  transition: var(--transition);
+}
+ .admin-nav-bar .nav-center .links li a:hover {
+  color: var(--white);
+}
+
+ .admin-nav-bar .nav-logo-img {
+  width: 12rem;
+}
+ .admin-nav-bar .nav-logo-img img {
+  width: 100%;
+}
+ .admin-nav-bar .nav-link-box {
+  border-radius: var(--borderRadiusSmall);
+  background-color: var(--grey-200);
+  padding: 0.25rem;
+}

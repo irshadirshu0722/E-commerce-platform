@@ -1,0 +1,100 @@
+/* 
+===============
+Product by category
+-===============
+*/
+.category-products.section {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+.category-products-center .categories {
+  display: flex;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  left: 0;
+  height: 35px;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+  height: auto;
+}
+.category-products-center .categories.scrollable-div::-webkit-scrollbar {
+  width: 0; /* hide scrollbar width for WebKit browsers */
+}
+
+.category-products-center .categories.scrollable-div {
+  scrollbar-width: none; /* hide scrollbar width for Firefox */
+}
+
+/* Optional: Customize scrollbar appearance */
+.category-products-center .categories.scrollable-div::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.category-products-center .categories.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.category-products-center
+  .categories.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.category-products-center .categories .category-pointer {
+  position: absolute;
+  width: 5rem;
+  height: 7px;
+  background-color: var(--blue-btn);
+  bottom: -2px;
+  border-bottom-left-radius: var(--borderRadiusMedium);
+  border-bottom-right-radius: var(--borderRadiusMedium);
+  transition: var(--transition);
+}
+.category-products-center .categories li {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.25rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  user-select: none;
+}
+.category-products-center .categories li.selected {
+  border-bottom: 6px solid var(--blue-btn);
+  border-bottom-left-radius: var(--borderRadiusMedium);
+  border-bottom-right-radius: var(--borderRadiusMedium);
+}
+.category-products {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  gap: 1rem;
+}
+.category-products li {
+  background-color: var(--white);
+  box-shadow: var(--shadow-3);
+}
+.category-product-info {
+  border-top: 1px solid var(--black);
+  padding: 0.5rem;
+}
+.category-product-info .price {
+  margin-top: 1rem;
+  color: var(--grey-900);
+  font-size: 1rem;
+}
+.category-products .category-product-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.category-products-center .MuiPagination-root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin-top as needed */
+  box-shadow: none;
+}

@@ -1,0 +1,128 @@
+.order-placed-section .order-placed-center {
+  max-width: var(--fixed-width);
+  min-height: calc(100vh - 65px);
+}
+.order-placed-center .section-heading {
+  text-align: center;
+}
+.order-placed-center .section-heading p {
+  letter-spacing: 2px;
+}
+.order-placed-center .section-heading h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+}
+.order-placed-center .order-info-container {
+  margin-top: 2rem;
+}
+.order-placed-center .order-info-container .section-sub-heading {
+  margin-bottom: 1rem;
+}
+.order-placed-center .order-info-container .section-sub-heading h3 {
+  margin-bottom: 1rem;
+}
+.order-placed-center .order-info-container .order-info-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.order-placed-center .order-info-container .order-info-group .order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.order-placed-center .order-info-container .order-info-group .order-info p {
+  letter-spacing: 2px;
+  color: var(--grey-900);
+}
+.order-placed-center
+  .order-info-container
+  .order-info-group
+  .order-info
+  button {
+  background-color: var(--grey-200);
+  color: var(--grey-900);
+  border-radius: var(--borderRadiusSmall);
+}
+.order-placed-center .order-info-container .order-info-group .order-image {
+  height: 100px;
+  width: 200px;
+}
+.order-placed-center .order-info-container .order-info-group .order-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--borderRadiusMedium);
+}
+.order-placed-center
+  :is(
+    .order-placed-shipping-address,
+    .order-placed-shipment,
+    .order-placed-payment
+  ) {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.order-placed-center
+  :is(
+    .order-placed-shipping-address span,
+    .order-placed-shipment span,
+    .order-placed-payment span
+  ) {
+  background-color: var(--grey-200);
+  padding: 0.75rem;
+  border-radius: var(--borderRadiusMedium);
+  align-self: self-start;
+}
+.order-placed-center
+  :is(
+    .order-placed-shipping-address h5,
+    .order-placed-shipment h5,
+    .order-placed-payment h5
+  ) {
+  font-weight: 700;
+}
+.order-placed-center
+  :is(
+    .order-placed-shipping-address p,
+    .order-placed-shipment p,
+    .order-placed-payment p
+  ) {
+  line-height: 1.2;
+}
+.order-placed-center
+  :is(
+    .order-placed-shipping-address .address,
+    .order-placed-shipment .address,
+    .order-placed-payment .address
+  ) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+@media (max-width: 650px) {
+  .order-placed-center {
+    padding: 0 0.5rem;
+  }
+  .order-placed-center .order-info-container .order-info-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .order-placed-center .order-info-container .order-info-group .order-info {
+    align-self: self-start;
+  }
+}
+
+@media (max-width: 330px) {
+  .order-placed-center :is(.order-placed-shipping-address p, ) {
+    font-size: 0.9rem;
+  }
+}
+/* 
+
+Order animation
+*/
